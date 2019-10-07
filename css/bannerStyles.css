@@ -1,0 +1,428 @@
+/* General CSS*/
+body {
+	margin: 48px;
+	background: #000;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+hr {
+	margin-top: 50px;
+	margin-bottom: 50px;
+	border-radius: 50%; 
+	height: 20px;
+	border-color: black;
+	background: linear-gradient(to right,  rgba(29,0,45,1) 0%, rgba(163,101,255,1) 50%, rgba(29,0,45,1) 100%);
+}
+
+/* Banner 1 - Tekken Ring */
+
+@font-face {
+	font-family: tarrget;
+	src: url('../assets/fontfiles/tarrget.ttf');
+}
+
+#animatedBanner {
+	position: relative;
+	width: 1200px;
+	height: 500px;
+	background: #000 url('../assets/img/ring.jpg');
+	margin: 10vh auto 0;
+	background-size: cover;
+}
+
+#topDoor {
+	position: absolute;
+	width: 1200px;
+	height: 250px;
+	background-size: contain;
+	background: url('../assets/img/b.jpg') no-repeat center bottom;
+	animation: topOpen 1s ease 1s 1 forwards;
+}
+
+#bottomDoor {
+	position: absolute;
+	width: 1200px;
+	height: 250px;
+	background-size: contain;
+	background: url('../assets/img/b.jpg') no-repeat center top;
+	margin-top: 250px;
+	animation: bottomOpen 1s ease 1s 1 forwards
+}
+
+#jin {
+	position: absolute;
+	opacity: 0;
+	height: 50px;
+	margin: 250px 0px 0px 600px;
+	animation: flyIn 1s ease 1.5s 1 forwards;
+}
+
+#pauseContainer{
+  	text-align: center;
+}
+
+#pause{
+	margin-top: 10px;
+	border-radius: 20%;
+  	color: #494949;
+	text-transform: uppercase;
+	text-decoration: none;
+	background: #ffffff;
+	padding: 10px;
+	border: 4px solid #494949;
+	display: inline-block;
+	transition: all 0.4s ease 0s;
+}
+
+#pause:hover{
+	color: #ffffff;
+	background: #a66aff;
+	border-color: #a66aff;
+	transition: all 0.4s ease 0s;
+}
+
+#heihachi {
+	position: absolute;
+	opacity: 0;
+	height: 50px;
+	margin: 250px 0px 0px 600px;
+	animation: flyInTwo 1s ease 1.5s 1 forwards;
+}
+
+.lightning {
+	position: absolute;
+	opacity: 0;
+	margin: 250px 0px 0px 600px;
+	animation: flyInLightning 5s ease 2.5s 1 forwards;
+}
+
+#text {
+	font-family: tarrget;
+	opacity: 0;
+	right: 0;
+	position: absolute;
+	margin-top: 25px;
+	margin-left: 800px;
+	animation: textIn 1s ease 2.5s 1 forwards;
+}
+
+body {
+	margin: 48px;
+	background: #000;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes topOpen {
+	0% {
+		height: 250px;
+	}
+
+	100% {
+		height: 0px;
+	}
+
+}
+
+@keyframes bottomOpen {
+	0% {
+		height: 250px;
+		margin-top: 250px;
+	}
+
+	100% {
+		height: 0px;
+		margin-top: 500px;
+	}
+
+}
+
+@keyframes flyIn {
+	0% {
+		height: 50px;
+		margin: 250px 0px 0px 600px;
+		opacity: 1;
+	}
+
+	50% {
+		height: 500px;
+		margin: 0px;
+		opacity: 1;
+	}
+
+	100% {
+		height: 500px;
+		margin: 0px 0px 0px 140px;
+		opacity: 1;
+	}
+
+}
+
+@keyframes flyInTwo {
+	0% {
+		height: 50px;
+		margin: 250px 0px 0px 600px;
+		opacity: 1;
+	}
+
+	50% {
+		height: 500px;
+		margin: 0px 0px 0px 739px;
+		opacity: 1;
+	}
+
+	100% {
+		height: 500px;
+		margin: 0px 0px 0px 500px;
+		opacity: 1;
+	}
+
+}
+
+@keyframes flyInLightning {
+	0% {
+		height: 500px;
+		margin: 0px 0px 0px 350px;
+		opacity: 0;
+	}
+
+	10% {
+		height: 500px;
+		margin: 0px 0px 0px 350px;
+		opacity: 1;
+	}
+
+	20% {
+		height: 500px;
+		margin: 0px 0px 0px 350px;
+		opacity: 0;
+	}
+
+	40% {
+		height: 500px;
+		margin: 0px 0px 0px 350px;
+		opacity: 1;
+	}
+
+	55% {
+		height: 500px;
+		margin: 0px 0px 0px 350px;
+		opacity: 0.5;
+	}
+
+	80% {
+		height: 500px;
+		margin: 0px 0px 0px 350px;
+		opacity: 1;
+	}
+
+
+	100% {
+		height: 500px;
+		margin: 0px 0px 0px 350px;
+		opacity: 0;
+	}
+
+
+
+}
+
+@keyframes textIn {
+	0% {
+		font-size: 30px;
+		opacity: 0;
+	}
+
+	100% {
+		color: white;
+		font-size: 30px;
+		opacity: 1;
+	}
+}
+
+/* Banner 2 - Snow Bros */
+
+@font-face {
+	font-family: Snow Bros;
+	src: url('../assets/fontfiles/snow-bros.ttf');
+}
+
+.banner {
+	width: 1200px;
+	height: 250px;
+	margin: 0px auto;
+	border: #639 1px solid;
+	overflow: hidden;
+	transition: all 0.2s ease-out;
+}
+
+.bannerSelected{
+	border: 5px solid firebrick;
+}
+
+.banner:hover {
+	border: 5px solid firebrick;
+	background-color:#000;
+  	transition: all 0.2s ease-in;
+
+}
+
+.bannerBackdrop {
+	position: relative;
+	background: url('../assets/img/snow.png') repeat-x;
+	width: 1644px;
+	height: 250px;
+	animation: backdropRoll linear 15s infinite;
+}
+
+@keyframes backdropRoll {
+	from {
+		right: 0px;
+	}
+
+	to {
+		right: 444px;
+	}
+
+}
+
+.bannerContent {
+	position: relative;
+	display: flex;
+	width: 96%;
+	height: 110px;
+	margin: 20px auto;
+	top: -200px;
+	color: #FFF;
+	font-size: 27px;
+	font-family: Snow Bros;
+	text-shadow: -1px 0 orange, 0 1px orange, 1px 0 orange, 0 -1px orange;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+}
+
+
+/* Banner 3 - Peach Banner */
+
+@font-face {
+	font-family: Snow Bros;
+	src: url('../assets/fontfiles/snow-bros.ttf');
+}
+
+.peachBanner {
+	width: 100%;
+	height: 250px;
+	margin: 0px auto;
+	margin-bottom: 20px;
+	border: lightpink 1px solid;
+	overflow: hidden;
+	transition: all 0.2s ease-out;
+}
+
+.peachBannerSelected{
+	border: 5px solid lightpink;
+}
+
+.peachBanner:hover {
+	border: 5px solid lightpink;
+	background-color:#000;
+  	transition: all 0.2s ease-in;
+
+}
+
+.peachBackdrop {
+	position: relative;
+	background: url('../assets/img/peach.png') repeat;
+	width: calc(100% + 840px);
+	height: calc(100% + 537px);
+	animation: backdropRollTwo linear 15s infinite;
+
+}
+
+@keyframes backdropRollTwo {
+	from {
+		bottom: 0px;
+	}
+
+	to {
+		bottom: 537px;
+	}
+
+}
+
+.peachContent {
+	position: relative;
+	display: flex;
+	width: 96%;
+	height: 110px;
+	margin: 20px auto;
+	top: -737px;
+	color: #FFF;
+	font-size: 27px;
+	font-family: Snow Bros;
+	text-shadow: -1px 0 lightpink, 0 1px lightpink, 1px 0 lightpink, 0 -1px lightpink;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+}
+
+/* Banner 4 - Mario Banner */
+
+.marioBanner {
+	width: 100%;
+	height: 250px;
+	margin: 0px auto;
+	border: darkred 1px solid;
+	overflow: hidden;
+	transition: all 0.2s ease-out;
+}
+
+.marioBannerSelected{
+	border: 5px solid darkred;
+}
+
+.marioBanner:hover {
+	border: 5px solid darkred;
+	background-color:#000;
+  	transition: all 0.2s ease-in;
+}
+
+.marioBackdrop {
+	position: relative;
+	background: url('../assets/img/mushroom.jpg') repeat;
+	width: calc(100% + 1290px);
+	height: calc(100% + 1290px);
+	animation: backdropRollThree linear 15s infinite;
+
+}
+
+@keyframes backdropRollThree {
+	from {
+		right: 0px;
+		bottom: 0px;
+	}
+
+	to {
+		right: 1290px;
+		bottom: 1290px;
+	}
+
+}
+
+.marioContent {
+	position: relative;
+	display: flex;
+	width: 96%;
+	height: 110px;
+	margin: 20px auto;
+	top: -1490px;
+	color: #FFF;
+	font-size: 27px;
+	font-family: Snow Bros;
+	text-shadow: -1px 0 red, 0 1px red, 1px 0 red, 0 -1px red;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+}
+
+
